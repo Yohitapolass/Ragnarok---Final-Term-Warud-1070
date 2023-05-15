@@ -1,55 +1,51 @@
 ﻿using System;
-/*
-        struct City
-        {
-            public int CityNumber;
-            public string CityName;
-            public int LevelCovid;
-            public City(string CityNumber, string CityName, string LevelCovid) {
-            this.CityNumber = CityNumber;
-            this.CityName = CityName;
-            this.LevelCovid = LevelCovid;
 
-        }
+struct City
+{
+    public int CityNumber;
+    public string CityName;
+    public int LevelCovid;
+
+    public City(int CityNumber, string CityName, int LevelCovid)
+    {
+        this.CityNumber = CityNumber;
+        this.CityName = CityName;
+        this.LevelCovid = LevelCovid;
     }
-class Ragnarok{
+}
 
-    //static void Main(string []args){
+class Ragnarok
+{
+    static void Main(string[] args)
+    {
+        int AmountCity = int.Parse(Console.ReadLine());
+        City[] cities = new City[AmountCity];
 
-     //   int AmoutCity = int.Parse(Console.ReadLine());
-     //   string NameCity = string(Console.ReadLine());
-     //   string [ , ] City = new int[AmoutCity,NameCity];
+        for (int i = 0; i < AmountCity; i++)
+        {
+            Console.Write("CityNumber {0}: ", i + 1);
+            int CityNumber = int.Parse(Console.ReadLine());
+            Console.Write("CityName {0}: ", i + 1);
+            string CityName = Console.ReadLine();
+            Console.Write("LevelCovid {0}: ", i + 1);
+            int LevelCovid = int.Parse(Console.ReadLine());
 
-     //   }
-
-         static void Main(string[] args){
-
-            int AmoutCity = int.Parse(Console.ReadLine());
-            string [] City = new string[AmoutCity];
-           
-            for (int i = 0; i < AmoutCity ; i++) {
-                Console.Write("CityNumber {0}: ", i + 1);
-                string CityNumber = Console.ReadLine();
-                Console.Write("CityName {0}: ", i + 1);
-                string CityName = Console.ReadLine();
-                Console.Write("LevelCovid {0}: ", i + 1);
-                string LevelCovid = Console.ReadLine();
-
-            City city = new City(CityNumber,CityName,LevelCovid);
-            city[i] = city;
+            City city = new City(CityNumber, CityName, LevelCovid);
+            cities[i] = city;
         }
 
-         for (int i = -1; i < AmoutCity; i++) {
-             Console.WriteLine("------------------------------------");
-             Console.WriteLine("CityNumber: {0}", i + 1);
-             Console.WriteLine("CityName: {0}", city[i].CityName); 
-             Console.WriteLine("LevelCovid: {0}", city[i].CityName); 
-             Console.WriteLine("------------------------------------");
-             Console.WriteLine();
+        for (int i = 0; i < AmountCity; i++)
+        {
+            Console.WriteLine("------------------------------------");
+            Console.WriteLine("CityNumber: {0}", cities[i].CityNumber);
+            Console.WriteLine("CityName: {0}", cities[i].CityName);
+            Console.WriteLine("LevelCovid: {0}", cities[i].LevelCovid);
+            Console.WriteLine("------------------------------------");
+            Console.WriteLine();
         }
     }
 }
-*/
+/*
 struct City
 {
     public int CityNumber;
@@ -72,7 +68,7 @@ class Program
                 Console.Write("LevelCovid {0}: ", i + 1);
                 string LevelCovid = Console.ReadLine();
 
-        // Prompt the user to enter a number
+       
         Console.Write("Enter a number (0-9): ");
         int userInput;
 
@@ -81,7 +77,7 @@ class Program
             bool isValidCity = false;
             City selectedCity = new City();
 
-            // Find the city with the matching city number
+            
             foreach (City city in cities)
             {
                 if (city.CityNumber == userInput)
@@ -119,7 +115,7 @@ class Program
                 }
                 else if (message.Contains("Spread"))
                 {
-                    // Handle Spread message if needed
+                   
                 }
                 else if (message.Contains("Exit"))
                 {
@@ -146,3 +142,5 @@ class Program
     }
 }
 }
+*/
+
