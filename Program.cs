@@ -16,9 +16,9 @@ struct City
 
 class Ragnarok
 {
-    static void Main(string[] args)
-    {
-        int AmountCity = int.Parse(Console.ReadLine());
+    static void Main(string[] args){
+
+       int AmountCity = int.Parse(Console.ReadLine());
         City[] cities = new City[AmountCity];
 
         for (int i = 0; i < AmountCity; i++)
@@ -43,8 +43,16 @@ class Ragnarok
             Console.WriteLine("------------------------------------");
             Console.WriteLine();
         }
+
+
     }
-}
+    
+    }
+
+    //static void Checkthecity(int AmountCity)
+    
+
+
 /*
 struct City
 {
